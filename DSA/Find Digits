@@ -1,0 +1,28 @@
+Given an integer, for each digit that makes up the integer determine whether it is a divisor. Count the number of divisors occurring within the integer.
+
+Sample Input
+
+2
+12
+1012
+
+Sample Output
+
+2
+3
+
+
+SOLUTION:
+
+def findDigits(n):
+    # Write your code here
+    temp = str(n)                                           //first we convert the number into a string, so 1012 becomes "1012"
+    count = 0
+    for x in temp:                                          //We iterate over elements of the string, so '1', '0', '1', '2'
+        try:
+            if n % int(x) == 0:                             //Avoiding divide by zero error
+                count += 1                                  //Convert '1' into 1 by using int() funxtion and checking the condition
+        except ZeroDivisionError:
+            pass
+    
+    return count
