@@ -31,3 +31,25 @@ def birthday(s, d, m):
     return count
     
     
+    
+ANOTHER SOLUTION:
+def getWays(squares, d, m): 
+    count = 0    
+    for i in range(0,len(squares)+1-m):
+        if sum(squares[i:i+m]) == d:            
+            count+=1
+    return count
+    
+    
+  // Same complexity but using the sum(l[x:y]) will reduce the lines of code
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
