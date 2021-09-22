@@ -1,0 +1,39 @@
+You are given  integers.Sort the  integers and print the sorted order.
+Store the  integers in a vector.Vectors are sequence containers representing arrays that can change in size.
+
+
+Sample Input
+
+5
+1 6 10 8 4
+Sample Output
+
+1 4 6 8 10
+
+
+SOLUTION:
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    vector<int> v;
+    int n;
+    int x;
+    cin>>n;
+    for(int i = 0; i < n; i++)
+    {   cin>>x;
+        v.push_back(x);                     //Adding element to the end
+    }
+    sort(v.begin(),v.end());                //Sorting from beginning to end
+    for(int i = 0; i < v.size(); i++)
+    {
+        cout<<v[i]<<" ";
+    }
+    return 0;
+}
