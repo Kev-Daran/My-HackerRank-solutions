@@ -22,4 +22,4 @@ n = int(input().strip())
 arr = [int(arr_temp) for arr_temp in input().strip().split(' ')]
 while len(arr)!=0:
     print(len(arr))
-    arr = [x for x in arr if x != min(arr)]
+    arr = [x for x in arr if x != min(arr)]           //x for every x in arr where x is not equal to the min(arr), so we basically remove the lowest value in the list in each                                                           //iteration
