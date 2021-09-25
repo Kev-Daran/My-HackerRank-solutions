@@ -1,0 +1,10 @@
+Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.
+
+
+
+
+
+SOLUTION:
+
+select DISTINCT CITY from STATION
+where CITY NOT REGEXP "^[aeiou].*";             //Using Regexp, consider Non questions/regexp
