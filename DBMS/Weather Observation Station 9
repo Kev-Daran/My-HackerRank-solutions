@@ -8,3 +8,11 @@ SOLUTION:
 
 select DISTINCT CITY from STATION
 where CITY NOT REGEXP "^[aeiou].*";             //Using Regexp, consider Non questions/regexp
+
+
+
+
+ANOTHER SOLUTION:
+SELECT DISTINCT CITY FROM STATION
+WHERE CITY REGEXP '^[^aeiou]';
+//Putting a ^ inside the closed bracket means something completely different than putting it outside the brackets. Putting it inside the brackets makes it match all characters //EXCEPT the ones inside the bracket. So instead of writing [bcdfghjklmnpqrstvwxyz], we can write [^aeiou]
