@@ -1,0 +1,17 @@
+Sample Input
+
+10
+10
+Sample Output
+
+45°
+
+
+
+SOLUTION:
+import math
+AB = int(input())
+BC = int(input())
+print(round(math.degrees(math.atan(AB/BC))),end="°")            //arctan(AB/BC) will give the answer in radians, which is then converted to degrees and then rounded up
+
+//° is not being accepted however and while it will say the submission was successful in the submissions section it won't show when submitting in the editor
