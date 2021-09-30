@@ -52,3 +52,14 @@ int marks_summation(int* marks, int number_of_students, char gender) {
   }
   return sum;
 }
+
+
+
+ALTERNATIVE SOLUTION:(wow)
+int marks_summation(int* marks, int number_of_students, char gender) {
+    int sum = 0;
+    for (int i = (gender == 'b' ? 0 : 1); i < number_of_students; i = i + 2)            //based on the gender setting the value of i and then incrementing by 2 to get all the                                                                                           //necessary values
+        sum += *(marks + i);
+    
+    return sum;
+}
