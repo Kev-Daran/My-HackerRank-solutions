@@ -6,5 +6,5 @@ Query the greatest value of the Northern Latitudes (LAT_N) from STATION that is 
 
 
 SOLUTION:
-select round(max(LAT_N),4) from STATION
-where LAT_N < 137.2345;
+select round(max(LAT_N),4) from STATION                     
+where LAT_N < 137.2345;                             //Select the max value in LAT_N where LAT_N satisfies the given condition
