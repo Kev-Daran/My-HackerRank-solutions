@@ -12,4 +12,4 @@ Only enter a single integer. Do not include any extra spaces or newlines.
 
 
 SOLUTION:
-3
+2                     //Projection only sees the number of columns, 2 columns are mentioned in the question
