@@ -1,0 +1,18 @@
+A left rotation operation on an array of size n shifts each of the array's elements d unit to the left. Given an integer, d, rotate the array that many steps left and return the result.
+
+
+
+Sample Input
+
+5 4
+1 2 3 4 5
+Sample Output
+
+5 1 2 3 4
+
+
+
+SOLUTION:
+def rotateLeft(d, arr):
+    # Write your code here
+    return arr[d:] + arr[:d]            //first element will be arr[d] then we get all the elements to the end and append the first d elements to the resultant list
