@@ -1,3 +1,5 @@
 # My-HackerRank-solutions
-Explain Designer pdf
+Explain Designer pdf<br>
+Explain picking numbers
+
 
