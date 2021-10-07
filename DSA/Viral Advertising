@@ -1,0 +1,30 @@
+HackerLand Enterprise is adopting a new viral advertising strategy. When they launch a new product, they advertise it to exactly  people on social media.
+
+On the first day, half of those  people (i.e., ) like the advertisement and each shares it with  of their friends. At the beginning of the second day,  people receive the advertisement.
+
+Each day,  of the recipients like the advertisement and will share it with  friends on the following day.
+
+
+
+
+
+Sample Input
+
+3
+Sample Output
+
+9
+
+
+
+SOLUTION:
+def viralAdvertising(n):
+    # Write your code here
+    likes = 0
+    people = 5
+    for _ in range(0, n):
+        people = math.floor(people/2)
+        likes += people
+        people *= 3
+        
+    return likes
