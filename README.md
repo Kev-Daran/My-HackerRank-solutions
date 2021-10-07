@@ -1,5 +1,6 @@
 # My-HackerRank-solutions
 Explain Designer pdf<br>
-Explain picking numbers
+Explain picking numbers<br>
+Explain viral advertising<br>
 
 
