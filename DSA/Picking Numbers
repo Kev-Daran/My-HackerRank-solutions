@@ -1,0 +1,25 @@
+Given an array of integers, find the longest subarray where the absolute difference between any two elements is less than or equal to 1.
+
+
+
+Sample Input 0
+
+6
+4 6 5 3 3 1
+Sample Output 0
+
+3
+
+
+
+SOLUTION:
+n=int(input())
+l=[int(i) for i in input().split()]
+maximum=0
+for i in l:
+    c=l.count(i)
+    d=l.count(i-1)
+    c=c+d
+    if c > maximum:
+        maximum=c
+print(maximum)
