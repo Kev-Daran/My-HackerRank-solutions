@@ -1,0 +1,6 @@
+Write a query that prints a list of employee names (i.e.: the name attribute) from the Employee table in alphabetical order.
+
+
+SOLUTION:
+select NAME from EMPLOYEE
+order by NAME;          //Use the order by Clause to sort
