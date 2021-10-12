@@ -1,0 +1,30 @@
+Complete the printLinkedList function in the editor below.
+
+printLinkedList has the following parameter(s):
+
+SinglyLinkedListNode head: a reference to the head of the list
+Print
+
+For each node, print its data value on a new line .
+
+
+
+Sample Input
+
+2
+16
+13
+Sample Output
+
+16
+13
+
+
+SOLUTION(Python):
+def printLinkedList(head):
+    temp = head
+    if(head == None):             //Checking if there are elements in the given linked list
+        return
+    while(temp != None):          //Iterating to the end of the linked list
+        print(temp.data)          //Printing the data in each node
+        temp = temp.next          //Setting temp as the next element of the linked list
