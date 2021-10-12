@@ -28,3 +28,11 @@ def printLinkedList(head):
     while(temp != None):          //Iterating to the end of the linked list
         print(temp.data)          //Printing the data in each node
         temp = temp.next          //Setting temp as the next element of the linked list
+
+
+RECURSIVE SOLUTION:
+def print_list(head):
+    if head:                        //while there are values in head
+        print(head.data)            //print the value of data in head
+        print_list(head.next)       //Call the same function but with the next node as head
+       
