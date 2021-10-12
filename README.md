@@ -1,5 +1,4 @@
-# My-HackerRank-solutions
-# ToDo
+# To Do:
 Explain Designer pdf<br>
 Explain picking numbers<br>
 Explain viral advertising<br>
