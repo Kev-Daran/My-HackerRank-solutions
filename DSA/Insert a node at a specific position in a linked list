@@ -22,15 +22,15 @@ Sample Output
 SOLUTION:
 def insertNodeAtPosition(llist, data, position):
     # Write your code here
-    curpos = 1
+    curpos = 1                                                          //Setting a value for the current position
     newnode = SinglyLinkedListNode(data)
-    newnode.data = data
+    newnode.data = data                                                 //Creating a new node with the given data
     temp = llist
-    while temp != None:
-        if curpos == position:
+    while temp != None:                                                 //Iterating to the end of linked list
+        if curpos == position:                                          //When position matches, we link the new node in break the loop
             newnode.next = temp.next
             temp.next = newnode
             break
-        curpos += 1
+        curpos += 1                                                     //If it does not match, we increment the position value and go to the next node of the linked list
         temp = temp.next
     return llist
