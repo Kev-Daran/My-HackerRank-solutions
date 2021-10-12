@@ -1,0 +1,46 @@
+You are given the pointer to the head node of a linked list and an integer to add to the list. Create a new node with the given integer. Insert this node at the tail of the linked list and return the head node of the linked list formed after inserting this new node. The given head pointer may be null, meaning that the initial list is empty.
+
+Function Description
+
+Complete the insertNodeAtTail function in the editor below.
+
+insertNodeAtTail has the following parameters:
+
+SinglyLinkedListNode pointer head: a reference to the head of a list
+int data: the data value for the node to insert
+Returns
+
+SinglyLinkedListNode pointer: reference to the head of the modified linked list
+
+
+
+
+Sample Input
+
+STDIN Function ----- -------- 5 size of linked list n = 5 141 linked list data values 141..474 302 164 530 474
+
+Sample Output
+
+141
+302
+164
+530
+474
+
+
+
+
+
+SOLUTION(Python):
+def insertNodeAtTail(head, data):
+    if head == None:                                                  //Checking if the linked list contains any element
+        head = SinglyLinkedListNode(data)                             //if not create a new node
+        head.data = data                                              //Enter the data in the new head value
+    else:                                                             //If linked list already has elements
+        new_node = SinglyLinkedListNode(data)                         //Create a temporary newnode
+        new_node.data = data
+        curr = head
+        while curr.next != None:                                      //Iterate to the end of the linked list
+            curr = curr.next                    
+        curr.next = new_node                                          //Set the next value of the tail of the linked list to the newnode
+    return head
