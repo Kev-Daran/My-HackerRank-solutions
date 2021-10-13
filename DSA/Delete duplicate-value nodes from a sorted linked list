@@ -1,0 +1,35 @@
+You are given the pointer to the head node of a sorted linked list, where the data in the nodes is in ascending order. Delete nodes and return a sorted list with each distinct value in the original list. The given head pointer may be null indicating that the list is empty.
+
+
+Sample Input
+
+STDIN   Function
+-----   --------
+1       t = 1
+5       n = 5
+1       data values = 1, 2, 2, 3, 4
+2
+2
+3
+4
+Sample Output
+
+1 2 3 4 
+
+
+SOLUTION:
+def removeDuplicates(llist):
+    # Write your code here
+    prev = llist
+    curr = llist.next
+    if llist.next == None or llist == None:       //Checking if list is empty or only has 1 element
+        return llist
+    
+    while curr:                                 //We check till our current element reaches the end of the linked list
+        if curr.data == prev.data:              //if the current data and previous data are equal, we delete the curr node by going to its next element and then setting 
+            curr = curr.next                    //previous elements, next as it
+            prev.next = curr
+        else:
+            prev = prev.next                  //If they are not equal we iterate over the linked list normally
+            curr = curr.next
+    return llist
