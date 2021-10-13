@@ -33,3 +33,16 @@ def removeDuplicates(llist):
             prev = prev.next                  //If they are not equal we iterate over the linked list normally
             curr = curr.next
     return llist
+
+
+BETTER SOLUTION:
+def RemoveDuplicates(head):
+    if head is None:
+        return head
+    node = head
+    while node.next:                        //In this approach we don't define prev or curr but just use node.next.next for it, small change.
+        if node.data == node.next.data:
+            node.next = node.next.next
+        else:
+            node = node.next
+    return head
