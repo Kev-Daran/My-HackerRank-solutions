@@ -1,0 +1,30 @@
+Given the pointer to the head node of a linked list, change the next pointers of the nodes so that their order is reversed. The head pointer given may be null meaning that the initial list is empty.
+
+Sample Input
+
+1
+5
+1
+2
+3
+4
+5
+Sample Output
+
+5 4 3 2 1 
+
+
+SOLUTION:
+def reverse(head):
+    if head is None:
+        return None
+    prev = None                   
+    curr = head
+    aux = head.next
+    while curr != None:       //Till curr reaches end of linked list
+        curr.next = prev      //Setting the next of our current element to the previous element, we save the actual next element of curr in aux variable
+        prev = curr           //Setting the prev element as curr to reverse the linked list till curr
+        curr = aux            //Incrementing the position by saving the true curr.next in aux and then setting it back to curr
+        if curr != None:
+            aux = aux.next
+    return prev
