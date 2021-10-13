@@ -28,3 +28,12 @@ def reverse(head):
         if curr != None:
             aux = aux.next
     return prev
+
+
+BETTER SOLUTION:
+def Reverse(head):
+    prev = None
+    while head:
+        prev = Node(head.data, prev)                    //Creating a new node for each element but setting the "next" element of the node to the previous element (wow...)
+        head = head.next
+    return prev
