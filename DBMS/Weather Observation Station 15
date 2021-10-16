@@ -12,3 +12,11 @@ select max(LAT_N)
 from STATION
 where LAT_N < 137.2345
 );
+
+
+ALTERNATE SOLUTION:
+Select round(long_w,4) 
+from Station 
+where lat_n < 137.2345            
+order by lat_n desc             //Ordering LAT_N in descending order for all LAT_N < 137.2345
+limit 1;                        //Limiting the number of values to be shown to 1
