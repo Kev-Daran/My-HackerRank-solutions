@@ -27,4 +27,4 @@ a = set()
 for i in range(n):
     a.add(input())
 
-print(len(a))
+print(len(a))       // As sets will only store unique values, its lenght gives us the number of unique countries
