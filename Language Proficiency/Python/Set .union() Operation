@@ -18,4 +18,4 @@ Sample Output
 SOLUTION:
 _, a = input(), set(input().split())
 _, b = input(), set(input().split())                // We save the number of elements input in '_' as we don't need those variables and save the remaining as sets
-print(len(a.union(b)))
+print(len(a.union(b)))                              //Then we use the union method and get the resultant set's length for the required answer
