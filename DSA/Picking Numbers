@@ -14,7 +14,7 @@ Sample Output 0
 
 SOLUTION:
 n=int(input())
-l=[int(i) for i in input().split()]
+l=[int(i) for i in input().split()]                             //Explain
 maximum=0
 for i in l:
     c=l.count(i)
