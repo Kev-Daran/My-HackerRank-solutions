@@ -23,7 +23,7 @@ def viralAdvertising(n):
     likes = 0
     people = 5
     for _ in range(0, n):
-        people = math.floor(people/2)
+        people = math.floor(people/2)                       //Explain
         likes += people
         people *= 3
         
