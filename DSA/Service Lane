@@ -30,4 +30,4 @@ Sample Output
 SOLUTION:
 def serviceLane(n, cases):
     # Write your code here
-    return [min(width[x:y+1]) for x,y in cases]
+    return [min(width[x:y+1]) for x,y in cases]                             //Explain
