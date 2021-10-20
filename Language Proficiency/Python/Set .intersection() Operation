@@ -17,7 +17,7 @@ Sample Output
 
 
 
-SOLUTION:
+SOLUTION:                                       //n and b are not required for the solution
 n = int(input())
 arr = list(map(int, input().split()))
 
