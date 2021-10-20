@@ -28,3 +28,10 @@ brr = list(map(int, input().split()))
 s = set(arr)
 sb = set(brr)
 print(len(s.intersection(sb)))
+
+
+
+ALTERNATE SOLUTION:
+_, a = input(), set(input().split())                        //Just take inputs as set instead of taking them as lists and then converting them to sets
+_, b = input(), set(input().split())
+print(len(a.intersection(b)))
