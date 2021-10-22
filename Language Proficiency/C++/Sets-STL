@@ -64,3 +64,7 @@ int main() {
     }
     return 0;
 }
+
+
+// A better way of checking if an element is in a set is s.count(x). This will return the number of integer x in the set and 0 if it's not there hence satisfying our
+//if condition
