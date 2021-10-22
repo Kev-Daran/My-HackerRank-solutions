@@ -1,0 +1,35 @@
+Complete the parseInts function in the editor below.
+
+parseInts has the following parameters:
+
+string str: a string of comma separated integers
+Returns
+
+vector<int>: a vector of the parsed integers.
+
+
+
+Sample Input
+
+23,4,56
+Sample Output
+
+23
+4
+56
+
+
+SOLUTION:
+vector<int> parseInts(string str) {
+	// Complete this function
+    stringstream ss(str);                   //Initialzing str as stringstream ss
+    vector<int> ans;
+    int a;
+    char ch;
+    while(ss>>a)                          // 'a's value will be updated by the integer values, so while ss has integers in it
+    {
+        ans.push_back(a);                //push the element in the vector
+        ss >>ch;                        // ch is there to store ',' 
+    }
+    return ans;
+}
