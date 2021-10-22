@@ -17,3 +17,7 @@ def arrays(arr):
     # use numpy.array
     a = numpy.array(arr[::-1], float)               //To store the array as the reverse of the list (negative indexing)
     return a
+
+
+//Can lose the varable a and directly do:
+// return(numpy.array(arr[::-1],float)
