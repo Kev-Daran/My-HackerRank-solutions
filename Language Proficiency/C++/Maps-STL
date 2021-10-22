@@ -1,0 +1,67 @@
+You are appointed as the assistant to a teacher in a school and she is correcting the answer sheets of the students.Each student can have multiple answer sheets.So the teacher has  q queries:
+
+1 : Add the marks Y to the student whose name is X.
+
+2 : Erase the marks of the students whose name is X.
+
+3 : Print the marks of the students whose name is X. (If X didn't get any marks print 0.)
+
+Sample Input
+
+7
+1 Jesse 20
+1 Jess 12
+1 Jess 18
+3 Jess
+3 Jesse
+2 Jess
+3 Jess
+Sample Output
+
+30
+20
+0
+
+
+
+SOLUTION:
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <set>
+#include <map>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int q;
+    map<string, int> m;
+    cin >>q;
+    string X;
+    int Y,ch;
+    while(q--)
+    {
+        cin>>ch;
+        switch(ch)
+        {
+            case 1:
+            cin>>X>>Y;
+            m[X] = m[X] + Y;              //We don't need to use m.insert(make_pair(X,Y)) for this, simply typing m[X] = Y will insert the value on its own
+            break;
+            
+            case 2:
+            cin>>X;
+            m[X] = 0;
+            break;
+            
+            case 3:
+            cin>>X;
+            cout<<m[X]<<endl;
+            break;
+        }
+    }
+    return 0;
+}
