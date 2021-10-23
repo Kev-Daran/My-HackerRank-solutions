@@ -6,6 +6,7 @@ Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
 
 
 SOLUTION:
+
 select CITY.NAME
 from   CITY, COUNTRY
 where  COUNTRY.CONTINENT = 'Africa'                     // Getting the code of the country which has continent as Africa
@@ -15,9 +16,14 @@ and    CITY.COUNTRYCODE = COUNTRY.CODE;
 
 
 ALTERNATE SOLUTION:
+
 Select Name From City Where CountryCode In (
     Select Code From Country Where Continent = 'Africa'               //Using subqueries
 );
 
 
 ANOTHER ALTERNATE SOLUTION:
+
+Select City.Name From City Inner Join Country 
+On CountryCode = Code                                                       //Using join
+Where Continent = 'Africa';
