@@ -9,6 +9,6 @@ SOLUTION:
 
 SELECT salary * months AS earnings, COUNT(*)
 FROM Employee
-GROUP BY earnings
-ORDER BY earnings DESC
+GROUP BY earnings                                   // To get the count aggregate we use group by earnings
+ORDER BY earnings DESC                              //Order Earnings in descending order and limit the number of output to 1 to get the answer
 LIMIT 1;
