@@ -10,3 +10,14 @@ select CITY.NAME
 from   CITY, COUNTRY
 where  COUNTRY.CONTINENT = 'Africa'                     // Getting the code of the country which has continent as Africa
 and    CITY.COUNTRYCODE = COUNTRY.CODE;
+
+
+
+
+ALTERNATE SOLUTION:
+Select Name From City Where CountryCode In (
+    Select Code From Country Where Continent = 'Africa'               //Using subqueries
+);
+
+
+ANOTHER ALTERNATE SOLUTION:
