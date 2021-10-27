@@ -1,0 +1,32 @@
+You are given a string S.
+Your task is to print all possible permutations of size k of the string in lexicographic sorted order.
+
+
+Sample Input
+
+HACK 2
+Sample Output
+
+AC
+AH
+AK
+CA
+CH
+CK
+HA
+HC
+HK
+KA
+KC
+KH
+
+
+SOLUTION:
+from itertools import permutations
+
+word, num = input().split(" ")                            //Taking both inputs in the same line
+permutations = list(permutations(word, int(num)))       
+permutations.sort()                                      //Sorting the permutations
+
+for i in permutations:
+    print("".join(i))                                   //Joining both values of the tuple 
