@@ -5,4 +5,6 @@ Explain viral advertising<br>
 Explain Service lane<br>
 Explain LanguageProficiency/C++/Overload-Operators<br>
 Explain DBMS/Average-Population-Of-Each-Continent<br>
+Explain LanguageProficiency/C/Bitwise-Operators  Better solution <br>
 Do linked list stuff in other languages too<br>
+
