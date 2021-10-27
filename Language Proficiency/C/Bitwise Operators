@@ -25,11 +25,11 @@ void calculate_the_maximum(int n, int k) {
   {
       for(int j = 2; j<=n ;j++)
       {
-        if (i == j)
+        if (i == j)                                             //This can be ignored if we intialize the value of j to be j+1
         {
             continue;
         }
-        if((i & j) < k && (i & j) >= maxand)
+        if((i & j) < k && (i & j) >= maxand)                //Calculating maxand, maxor and maxxor
         {
             maxand = i & j;
         }
@@ -45,4 +45,14 @@ void calculate_the_maximum(int n, int k) {
   }
   
   printf("%d\n%d\n%d", maxand, maxor, maxxor);
+}
+
+
+
+BETTER SOLUTION:
+
+void calculate_the_maximum(int n, int k) {
+    printf("%d\n",((k-1)|k)<=n? (k-1):(k-2));
+    printf("%d\n",((k-1)&(k-2))==0? (k==3?0:(k-2)) : (k-1) );                   //Explanation????? O(1)
+    printf("%d\n", k-1);
 }
