@@ -32,3 +32,13 @@ int main()
         printf("%d ", *(arr + i));          //i's value will go from the length of the array to 0 in a backwards order hence getting the array in reverse order
     return 0;
 }
+
+
+
+
+ANOTHER METHOD:
+for (size_t i = 0, mid = num / 2; i < mid; i++) {                       //Going till the mid of the loop and swapping the first element to the last, 2nd to 2nd last and so on
+    int tmp = arr[i];
+    arr[i] = arr[num - 1 - i];
+    arr[num - 1 - i] = tmp;
+}
