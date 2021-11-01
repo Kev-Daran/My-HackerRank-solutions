@@ -10,5 +10,5 @@ Query the Manhattan Distance between points  and  and round it to a scale of  de
 
 SOLUTION:
 
-SELECT ROUND((MAX(Lat_N) - MIN(Lat_N)) + (MAX(Long_W) - MIN(Long_W)), 4)
+SELECT ROUND((MAX(Lat_N) - MIN(Lat_N)) + (MAX(Long_W) - MIN(Long_W)), 4)       //Manhattan distance formula |X1 – X2| + |Y1 – Y2|
 FROM   Station;
