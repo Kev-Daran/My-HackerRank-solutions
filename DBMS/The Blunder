@@ -8,5 +8,5 @@ Write a query calculating the amount of error (i.e.: actual - miscalculated  ave
 
 SOLUTION:
 
-select ceil(avg(SALARY) - avg(REPLACE(Salary, '0','')))
+select ceil(avg(SALARY) - avg(REPLACE(Salary, '0','')))                   //To remove 0 from the Salary value we replace 0 with an empty string
 from   EMPLOYEES;
