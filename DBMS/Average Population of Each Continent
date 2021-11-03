@@ -4,7 +4,7 @@ Given the CITY and COUNTRY tables, query the names of all the continents (COUNTR
 
 SOLUTION:
 
-SELECT COUNTRY.CONTINENT, FLOOR(AVG(CITY.POPULATION))
-FROM CITY INNER JOIN COUNTRY                                      //Explain
-ON CITY.COUNTRYCODE = COUNTRY.CODE                              
+SELECT COUNTRY.CONTINENT, FLOOR(AVG(CITY.POPULATION))            // floor rounds down the average of the city population to the nearest integer
+FROM CITY INNER JOIN COUNTRY                                      
+ON CITY.COUNTRYCODE = COUNTRY.CODE                              //Joining the two tables based on countrycode to get the right country and grouping the countrues by continent
 GROUP BY COUNTRY.CONTINENT;
