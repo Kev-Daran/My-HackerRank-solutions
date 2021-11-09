@@ -1,0 +1,11 @@
+Work out the first ten digits of the sum of   numbers.
+
+
+
+
+SOLUTION:
+
+s=0
+for i in range(int(input())):
+    s+=int(input())
+print(str(s)[:10])                  //Converting the int into string and using indexing
